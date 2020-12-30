@@ -1,0 +1,29 @@
+###########################################
+# A library that represents Digital Rain Animation on color displays that support TFT_eSPI
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+Digital_Rain_Animation_for_TFT_eSPI	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+init			KEYWORD2
+setParams		KEYWORD2
+play			KEYWORD2
+pause			KEYWORD2
+resume			KEYWORD2
+prepareAnim		KEYWORD2
+lineUpdate		KEYWORD2
+lineAnimation	KEYWORD2
+getASCIIChar	KEYWORD2
+setYPos			KEYWORD2
+getRandomNum	KEYWORD2
+###########################################
+# Constants (LITERAL1)
+###########################################
+LINE_WIDTH 		LITERAL1
+LETTER_HEIGHT 	LITERAL1

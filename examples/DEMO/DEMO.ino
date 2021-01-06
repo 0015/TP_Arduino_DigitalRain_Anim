@@ -15,5 +15,5 @@ void setup()
 
 void loop()
 {
-  digitalRainAnim.play();
+  digitalRainAnim.loop();
 }

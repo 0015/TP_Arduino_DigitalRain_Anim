@@ -24,7 +24,7 @@ void setup()
 
 void loop()
 {
-  digitalRainAnim.play();
+  digitalRainAnim.loop();
   rButton.loop();
   lButton.loop();
 }

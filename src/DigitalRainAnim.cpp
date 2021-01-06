@@ -51,6 +51,7 @@ void DigitalRainAnim::prepareAnim()
   }
 
   isPlaying = true;
+  lastUpdatedKeyTime = millis() - timeFrame;
 }
 
 //updating each line with a new length, Y position, and speed.
@@ -61,21 +62,31 @@ void DigitalRainAnim::lineUpdate(int lineNum){
 }
 
 //while moving vertically, the color value changes and the character changes as well.
+//if a random key is generated, switch to red.
 void DigitalRainAnim::lineAnimation(int lineNum)
 {
   int startX = lineNum * LINE_WIDTH;
-  tft_DigitalRainAnim->fillRect(startX, 0, 10, 240,TFT_BLACK);
-
   int currentY = 0;
+  tft_DigitalRainAnim->fillRect(startX, 0, 10, height, TFT_BLACK);
+
+  bool isKeyMode = keyString.length() > 0; 
+
   for(int i=0; i<line_length[lineNum]; i++){
-    int greenVal = map(i, 0, line_length[lineNum], 25, 255);
-    tft_DigitalRainAnim->setTextColor(tft_DigitalRainAnim->color565(0, greenVal, 0), TFT_BLACK);      
+    int colorVal = map(i, 0, line_length[lineNum], 25, 255);
+    tft_DigitalRainAnim->setTextColor(isKeyMode ? tft_DigitalRainAnim->color565(colorVal, 0, 0) : tft_DigitalRainAnim->color565(0, colorVal, 0), TFT_BLACK);      
     tft_DigitalRainAnim->drawString(this->getASCIIChar(), startX, line_pos[lineNum] + currentY, FONT_SIZE);  
     currentY = (i * LETTER_HEIGHT);
   }  
 
   tft_DigitalRainAnim->setTextColor(TFT_WHITE, TFT_BLACK);
-  tft_DigitalRainAnim->drawString(this->getASCIIChar(), startX, line_pos[lineNum] +currentY, FONT_SIZE);
+  if(keyString.length() > lineNum){
+    char _char = keyString.at(lineNum);
+    const char *keyChar = &_char;
+    tft_DigitalRainAnim->drawString(keyChar, startX, line_pos[lineNum] + currentY, FONT_SIZE);    
+  }else{
+    tft_DigitalRainAnim->drawString(this->getASCIIChar(), startX, line_pos[lineNum] + currentY, FONT_SIZE);  
+  }
+
   line_pos[lineNum] += line_speed[lineNum];
 
   if (line_pos[lineNum] >= height){
@@ -84,8 +95,12 @@ void DigitalRainAnim::lineAnimation(int lineNum)
 }
 
 //a function where animation continues to run.
-void DigitalRainAnim::play(){
+void DigitalRainAnim::loop(){
   uint32_t currentTime = millis();
+   if (((currentTime - lastUpdatedKeyTime) > KEY_RESET_TIME)) {
+      this->resetKey();
+    }
+
   if (((currentTime - lastDrawTime) < timeFrame)) {
     return;
   }
@@ -110,6 +125,12 @@ String DigitalRainAnim::getASCIIChar()
   return String((char)(random(33, 127)));
 }
 
+//a function that gets only alphabets from ASCII code.
+String DigitalRainAnim::getAbcASCIIChar()
+{
+  return String((char)(random(0,2) == 0 ?random(65, 91) : random(97, 123)));
+}
+
 //move the position to start from out of the screen.
 int DigitalRainAnim::setYPos(int lineLen){
   return lineLen * -20;
@@ -118,4 +139,22 @@ int DigitalRainAnim::setYPos(int lineLen){
 //the function is to get the random number (including max)
 int DigitalRainAnim::getRandomNum(int min, int max){
   return random(min, max+1);
+}
+
+//the function is to generate a random key with length with a length
+std::string DigitalRainAnim::getKey(int key_length){
+  this->resetKey();
+  int maxKeyLength =(key_length > 0 ? (key_length > numOfline ? numOfline : key_length) : numOfline);
+
+  for(int i = 0; i < maxKeyLength; i++){
+    keyString.append((this->getAbcASCIIChar()).c_str());
+  }
+
+  return keyString;
+}
+
+//the function is to remove the generated key
+void DigitalRainAnim::resetKey(){
+  keyString = "";
+  lastUpdatedKeyTime = millis();
 }

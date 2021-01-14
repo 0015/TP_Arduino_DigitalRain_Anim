@@ -8,6 +8,9 @@
 
 # Updates 
 
+ - v1.1.1
+    - Added the example, DEMO_Generating_Random_Key_Non_FreeRTOS for Arduino
+
  - v1.1.0
     - Added the function to generate a random key
     - Added switching to red color for one minute if it has a random key

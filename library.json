@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/0015/TP_Arduino_DigitalRain_Anim.git"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "frameworks": "arduino",
   "platforms": "*"
 }

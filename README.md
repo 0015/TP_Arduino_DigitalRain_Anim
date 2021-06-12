@@ -1,15 +1,15 @@
 # Digital Rain Animation for TFT_eSPI
 
  A library that represents Digital Rain Animation on color displays that support TFT_eSPI
- 
  Search for this library in the Arduino Library Manager and download it or clone it yourself from Github.
-
  This library is built on TFT_eSPI. This works properly on all color displays supported by TFT_eSPI.
+
+ *Unfortunately, it cannot be used as a problem with C++ standard libraries on AVR boards.
 
 # Updates 
 
  - v1.1.1
-    - Added the example, DEMO_Generating_Random_Key_Non_FreeRTOS for Arduino
+    - Added the example, DEMO_Generating_Random_Key_Non_FreeRTOS
 
  - v1.1.0
     - Added the function to generate a random key

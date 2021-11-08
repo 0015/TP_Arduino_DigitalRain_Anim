@@ -1,5 +1,5 @@
 {
-  "name": "Digital Rain Animation for TFT_eSPI",
+  "name": "Digital Rain Animation for TFT_eSPI using ESP32, ESP8266",
   "keywords": "TFT_eSPI, Animation, Matrix, Digital, Rain",
   "description": "We love the movie Matrix. Feel the Digital Rain Animation effect in the movie. You can make the matrix effect on your display easily.",
   "repository":
@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/0015/TP_Arduino_DigitalRain_Anim.git"
   },
-  "version": "1.1.1",
+  "version": "1.2.0",
   "frameworks": "arduino",
   "platforms": "*"
 }

@@ -11,6 +11,9 @@ void setup()
   tft.fillScreen(TFT_BLACK);
 
   digitalRainAnim.init(&tft);
+  digitalRainAnim.setTextColor(0, 0, 255);
+  digitalRainAnim.setBGColor(255, 255, 255);
+  digitalRainAnim.setHeadCharColor(255, 0, 0);
 }
 
 void loop()

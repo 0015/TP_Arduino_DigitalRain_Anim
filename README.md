@@ -1,12 +1,13 @@
-# Digital Rain Animation for TFT_eSPI
+# Digital Rain Animation for TFT_eSPI using ESP32, ESP8266
 
  A library that represents Digital Rain Animation on color displays that support TFT_eSPI
  Search for this library in the Arduino Library Manager and download it or clone it yourself from Github.
- This library is built on TFT_eSPI. This works properly on all color displays supported by TFT_eSPI.
-
- *Unfortunately, it cannot be used as a problem with C++ standard libraries on AVR boards.
+ This library is built on TFT_eSPI. Currently only works with ESP32 and ESP3266.
 
 # Updates 
+
+ - v1.2.0
+    - Added color change features. (BG color, Text Color, Header Char Color)
 
  - v1.1.1
     - Added the example, DEMO_Generating_Random_Key_Non_FreeRTOS

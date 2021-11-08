@@ -10,7 +10,7 @@ void setup()
   tft.setRotation(0);
   tft.fillScreen(TFT_BLACK);
 
-  digitalRainAnim.init(&tft);
+  digitalRainAnim.init(&tft, false, true);
 }
 
 void loop()

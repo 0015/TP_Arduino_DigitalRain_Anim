@@ -1,8 +1,7 @@
 #include <TFT_eSPI.h>
-#include <SPI.h>
 #include <DigitalRainAnim.h>
-TFT_eSPI tft = TFT_eSPI();
 
+TFT_eSPI tft = TFT_eSPI();
 DigitalRainAnim digitalRainAnim = DigitalRainAnim(); 
 
 void setup()

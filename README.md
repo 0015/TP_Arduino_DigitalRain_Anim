@@ -8,7 +8,7 @@
 
 # Updates 
 
- - v1.2.0
+ - v1.2.1
     - Added color change features. (BG color, Text Color, Header Char Color)
 
  - v1.1.1

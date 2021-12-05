@@ -4,7 +4,13 @@
  Search for this library in the Arduino Library Manager and download it or clone it yourself from Github.
  This library is built on TFT_eSPI. Currently only works with ESP32 and ESP3266.
 
+<a href="https://youtu.be/i6gGK4L4Yv8">
 <img width="800" src="https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/image.jpg">
+</a>
+
+<a href="https://youtu.be/uexWyEWtVzg">
+<img width="800" src="https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/ttgo.jpg">
+</a>
 
 # Updates 
 

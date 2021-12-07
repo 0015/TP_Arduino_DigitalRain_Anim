@@ -1,3 +1,5 @@
+[![arduino-library-badge](https://www.ardu-badge.com/badge/Digital%20Rain%20Animation%20for%20TFT_eSPI.svg?)](https://www.ardu-badge.com/Digital%20Rain%20Animation%20for%20TFT_eSPI)
+
 # Digital Rain Animation for TFT_eSPI using ESP32, ESP8266
 
  A library that represents Digital Rain Animation on color displays that support TFT_eSPI

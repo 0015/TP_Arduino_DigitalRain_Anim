@@ -1,12 +1,12 @@
 ###########################################
-# A library that represents Digital Rain Animation on color displays that support TFT_eSPI
+# A library for implementation of matrix effects
 ###########################################
 
 ###########################################
 # Datatypes (KEYWORD1)
 ###########################################
 
-Digital_Rain_Animation_for_TFT_eSPI	KEYWORD1
+Digital_Rain_Animation	KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)

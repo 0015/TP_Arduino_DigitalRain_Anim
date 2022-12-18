@@ -1,5 +1,5 @@
 /*
-  MatrixAnim.hpp - Library for Digital Rain Animation(MATRIX EFFECT).
+  DigitalRainAnimation.hpp - Library for Digital Rain Animation(MATRIX EFFECT).
   Created by Eric Nam, November 08, 2021.
   Released into the public domain.
 */
@@ -62,7 +62,7 @@ private:
     height = _gfx->height();
     _gfx->fillRect(0, 0, width, height, bgColor);
     _gfx->setTextColor(textColor, bgColor);
-    numOfline = width / lineWidth;
+    numOfline = width / lineWidth + 1;
 
     for (int i = 0; i < numOfline; i++) {
       line_length.push_back(getRandomNum(line_len_min, line_len_max));
@@ -121,9 +121,9 @@ private:
     }
   }
 
-  //a function that gets randomly from ASCII code 33 to 126.
+  //a function that gets randomly from ASCII codes 33 to 65 and 91 to 126. (For MatrixCodeNFI)
   String getASCIIChar() {
-    return String((char)(random(33, 127)));
+    return String((char)(random(0, 2) == 0 ? random(33, 65) : random(91, 126)));
   }
 
   //a function that gets only alphabets from ASCII code.

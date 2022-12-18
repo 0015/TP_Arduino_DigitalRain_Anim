@@ -1,10 +1,13 @@
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Digital%20Rain%20Animation%20for%20TFT_eSPI.svg?)](https://www.ardu-badge.com/Digital%20Rain%20Animation%20for%20TFT_eSPI)
 
-# Digital Rain Animation for TFT_eSPI using ESP32, ESP8266
+# Digital Rain Animation for TFT_eSPI, LovyanGFX, and Arduino_GFX(Adafruit GFX)
 
- A library that represents Digital Rain Animation on color displays that support TFT_eSPI
- Search for this library in the Arduino Library Manager and download it or clone it yourself from Github.
- This library is built on TFT_eSPI. Currently only works with ESP32 and ESP3266.
+ Great animation effects from the movie Matrix can be easily shown on your display.
+ Search for this library in the Arduino Library Manager and download it or clone it yourself from this GitHub repository.
+ 
+<a href="https://youtu.be/1qTgspF4SPc">
+<img width="800" src="https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/v2.0.jpg">
+</a>
 
 <a href="https://youtu.be/i6gGK4L4Yv8">
 <img width="800" src="https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/image.jpg">
@@ -15,6 +18,9 @@
 </a>
 
 # Updates 
+ - v2.0.1
+   - Supports TFT_eSPI, LovyanGFX, and Arduino_GFX(Adafruit GFX)
+   - Example for Japanese
 
  - v1.2.1
     - Added color change features. (BG color, Text Color, Header Char Color)

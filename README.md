@@ -1,38 +1,73 @@
+#  Digital Rain Animation(A.K.A Matrix Effect) for ESP32 Displays
+
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Digital%20Rain%20Animation%20for%20TFT_eSPI.svg?)](https://www.ardu-badge.com/Digital%20Rain%20Animation%20for%20TFT_eSPI)
 
-# Digital Rain Animation for TFT_eSPI, LovyanGFX, and Arduino_GFX(Adafruit GFX)
+Bring the iconic Matrix-style digital rain animation to life on your ESP32-powered display!
 
- Great animation effects from the movie Matrix can be easily shown on your display.
- Search for this library in the Arduino Library Manager and download it or clone it yourself from this GitHub repository.
- 
-<a href="https://youtu.be/1qTgspF4SPc">
-<img width="800" src="https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/v2.0.jpg">
-</a>
+This library supports popular graphics drivers like **TFT_eSPI**, **LovyanGFX**, and **Arduino_GFX** (Adafruit GFX), making it easy to integrate with a wide range of displays.
 
-<a href="https://youtu.be/i6gGK4L4Yv8">
-<img width="800" src="https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/image.jpg">
-</a>
+---
 
-<a href="https://youtu.be/uexWyEWtVzg">
-<img width="800" src="https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/ttgo.jpg">
-</a>
+## Demo Videos
 
-# Updates 
- - v2.0.1
-   - Supports TFT_eSPI, LovyanGFX, and Arduino_GFX(Adafruit GFX)
-   - Example for Japanese
+Click the thumbnails below to see the animation in action:
 
- - v1.2.1
-    - Added color change features. (BG color, Text Color, Header Char Color)
+[![v2.0 demo](https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/v2.0.jpg)](https://youtu.be/1qTgspF4SPc)
 
- - v1.1.1
-    - Added the example, DEMO_Generating_Random_Key_Non_FreeRTOS
+[![video preview](https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/image.jpg)](https://youtu.be/i6gGK4L4Yv8)
 
- - v1.1.0
-    - Added the function to generate a random key
-    - Added switching to red color for one minute if it has a random key
-    - Added the example, DEMO_Generating_Random_Key
+[![TTGO demo](https://github.com/0015/TP_Arduino_DigitalRain_Anim/blob/main/misc/ttgo.jpg)](https://youtu.be/uexWyEWtVzg)
 
-# License
+---
 
- This software is written by Eric Nam and is licensed under The MIT License. Check License.txt for more information.
+## Features
+
+- Matrix-style rain effect on various displays
+- Supports:
+  - **TFT_eSPI**
+  - **LovyanGFX**
+  - **Arduino_GFX (Adafruit GFX)**
+- Customizable:
+  - Text and background colors
+  - Character size
+  - Falling speed and effect intensity
+- Random key generation with color-switching animation
+- Minimal resource usage for smooth rendering
+
+---
+
+## Installation
+
+### From Arduino Library Manager
+1. Open **Arduino IDE**
+2. Go to **Sketch → Include Library → Manage Libraries…**
+3. Search for **Digital Rain Animation**
+4. Click **Install**
+
+### Manual Installation
+```bash
+git clone https://github.com/0015/TP_Arduino_DigitalRain_Anim.git
+```
+
+## Update Log
+- v2.0.2
+   * Fixed bug where one more line would be displayed
+
+- v2.0.1
+   * Added support for TFT_eSPI, LovyanGFX, Arduino_GFX
+   * Example added for Japanese characters
+
+- v1.2.1
+   * Added color customization:
+      * Background
+      * Text
+      * Header character
+
+- v1.1.x
+   * Added random key generator
+   * Red animation mode when key is active
+   * Examples added for key features
+
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.

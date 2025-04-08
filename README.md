@@ -1,9 +1,11 @@
 #  Digital Rain Animation(A.K.A Matrix Effect) for ESP32 Displays
 
-[![arduino-library-badge](https://www.ardu-badge.com/badge/Digital%20Rain%20Animation%20for%20TFT_eSPI.svg?)](https://www.ardu-badge.com/Digital%20Rain%20Animation%20for%20TFT_eSPI)
+<div align="center">
+
+[![Matrix Prism](./misc/matrix_prism.gif)](https://youtu.be/49H7vtQmagQ)
+</div>
 
 Bring the iconic Matrix-style digital rain animation to life on your ESP32-powered display!
-
 This library supports popular graphics drivers like **TFT_eSPI**, **LovyanGFX**, and **Arduino_GFX** (Adafruit GFX), making it easy to integrate with a wide range of displays.
 
 ---
